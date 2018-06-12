@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
+import {Jumbotron, Grid, Row, Col, Image, Button, Clearfix, Glyphicon} from 'react-bootstrap';
+
 
 export default class Whyus extends Component {
 	render() {
 		return (
-			<section class="pb_section" data-section="why-us" id="section-why-us">
-      <div class="container">
-        <div class="row justify-content-md-center text-center mb-5">
-          <div class="col-lg-7">
-            <h2 class="mt-0 heading-border-top mb-3 font-weight-normal">Why Us?</h2><br/>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="images right">
-              <img class="img1 img-fluid" src="assets/images/600x450_img_2.jpg" alt="free Template by uicookies.com"/>
-              <img class="img2" src="assets/images/800x500_img_1.jpg" alt="free Template by uicookies.com"/>
-            </div>
-          </div>
-          <div class="col-lg-5 pl-md-5 pl-sm-0">
-            <div id="exampleAccordion" class="pb_accordion" data-children=".item">
+			<Grid>
+            <h2 class="mt-0 heading-border-top mb-3 font-weight-normal">Services</h2>
+
+  <Row className="show-grid">
+    <Col md={6} mdPush={6}>
+          <Image src="assets/images/600x450_img_2.jpg" rounded responsive/>
+    </Col>
+    <Col md={6} mdPull={6}>
+<div id="exampleAccordion" class="pb_accordion" data-children=".item">
               <div class="item">
                 <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1" class="pb_font-18">Industry relations</a>
                 <div id="exampleAccordion1" class="collapse show" role="tabpanel">
@@ -43,12 +38,9 @@ export default class Whyus extends Component {
                   <p>We are global with one of the largest communities in the world</p>
                 </div>
               </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
+            </div>    </Col>
+  </Row>
+</Grid>
 		);
 	}
 }
